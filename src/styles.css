@@ -1,0 +1,17 @@
+:root {
+  --primary-clr: #153448;
+  --secondary-clr: #3C5B6F;
+  --tertiary-clr: #948979;
+  --last-clr: #DFD0B8;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
