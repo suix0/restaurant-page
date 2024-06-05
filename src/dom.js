@@ -50,7 +50,7 @@ function addDish(container, dishName, dishMacros, dishPrice) {
   // Add price
   const dishPriceDom = document.createElement('p');
   dishPriceDom.textContent = dishPrice;
-  dishContainer.appendChild(dishPriceDom);0
+  dishContainer.appendChild(dishPriceDom);
 
   container.appendChild(dishContainer);
 }
