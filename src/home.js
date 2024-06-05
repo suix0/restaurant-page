@@ -3,6 +3,7 @@ import restaurant from './fitness.png';
 
 export default function createHomePage() {
   const contentContainer = document.querySelector("#content");
+  contentContainer.innerText = "";
   const restaurantImg = new Image;
   restaurantImg.src = restaurant;
 
