@@ -24,7 +24,7 @@ export default function createHomePage() {
     "We value the importance of macronutrients. Our menu clearly displays protein, carb, and fat content for each dish, making it easy to customize your meal to your fitness goals."
   ]
 
-  addList(contentContainer, "li", listContent);
+  addList(contentContainer, "ul", listContent);
 
   // Create a reviews section
   addText(contentContainer, "h2", "Reviews", "1.5rem");

@@ -5,12 +5,12 @@
   --last-clr: #DFD0B8;
 }
 
-*,
+/* *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-}
+} */
 
 body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

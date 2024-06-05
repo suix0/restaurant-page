@@ -17,15 +17,15 @@ function addReview(container, sectionElement, sectionTextElement, sectionMessage
 }
 
 function addList(container,listType, listContent) {
-  const list = document.createElement(listType);
+  const newList = document.createElement(listType);
 
   listContent.map(content => {
     const listContentDom = document.createElement("li");
     listContentDom.textContent = content;
-    list.appendChild(listContentDom); 
+    newList.appendChild(listContentDom); 
   })
 
-  container.appendChild(list);
+  container.appendChild(newList);
 }
 
 export { addText, addImage, addReview, addList };
