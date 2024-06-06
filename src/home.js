@@ -11,9 +11,6 @@ export default function createHomePage() {
   addText(contentContainer, "h1","Welcome to GAINSTaurant", "2rem"); 
   addImage(contentContainer, restaurantImg);
 
-  // Add a welcoming message
-  addText(contentContainer, "p", "The perfect restaurant, once a fantasy in every gym and fitness enthusiasts, now a reality.", "1rem"); // Brief message after heading
-
   // Add a pleasing message to appeal customers
   addText(contentContainer, "h2", "Looking to power your workouts and achieve your fitness goals?", "1.5rem");
   addText(contentContainer, "p", "Look no further than GAINZTurant! We're passionate about providing delicious and nutritious meals specifically designed to support active lifestyles.", "1rem");
