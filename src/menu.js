@@ -61,4 +61,17 @@ export default function createMenuPage() {
   
   const postThree = dish("Salmon Fillet with Quinoa and Roasted Asparagus", {Protein: "35g",Carbs: "35g",Fat: "15g"}, "$8.00");
   addDish(contentContainer, postThree.dishName, postThree.dishMacros, postThree.price);
+
+  // Add Dinner
+  addText(contentContainer, "h1", "Dinner", "2rem");
+
+  const dinnerOne = dish("Turkey Meatballs with Zucchini Noodles and Marinara Sauc", {Protein: "35g",Carbs: "30g",Fats: "15g"}, "$7.00");
+  addDish(contentContainer, dinnerOne.dishName, dinnerOne.dishMacros, dinnerOne.price);
+
+
+  const dinnerTwo = dish("Grilled Salmon with Roasted Sweet Potatoes and Sautéed Kale", {Protein: "40g",Carbs: "40g",Fat: "20g"}, "$8.50");
+  addDish(contentContainer, dinnerTwo.dishName, dinnerTwo.dishMacros, dinnerTwo.price);
+  
+  const dinnerThree = dish("Chicken Fajita Bowl with Bell Peppers, Onions, and Brown Rice", {Protein: "45g",Carbs: "45g",Fat: "12g"}, "$6.50");
+  addDish(contentContainer, dinnerThree.dishName, dinnerThree.dishMacros, dinnerThree.price);
 }
