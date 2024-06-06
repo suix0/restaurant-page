@@ -28,6 +28,10 @@ function addList(container,listType, listContent) {
   container.appendChild(newList);
 }
 
+function macroToNum(str) {
+  return parseInt(str.slice(0, 2));
+}
+
 function addDish(container, dishName, dishMacros, dishPrice) {
   const dishContainer = document.createElement("div");
   dishContainer.style.border = "1px solid black";
@@ -46,6 +50,25 @@ function addDish(container, dishName, dishMacros, dishPrice) {
     macrosDom.textContent = macros;
     dishContainer.appendChild(macrosDom);
   }
+
+  // Dynamically calculate calorie and add it
+  let macrosCalories = [];
+  
+  for (let macro in dishMacros) {
+    if (macro === "Protein") {
+      macrosCalories.push(macroToNum(dishMacros[macro]) * 4);
+    } else if (macro === "Carbs") {
+      macrosCalories.push(macroToNum(dishMacros[macro]) * 4);
+    } else {
+      macrosCalories.push(macroToNum(dishMacros[macro]) * 9);
+    }
+  }
+
+  let totalCalories = macrosCalories.reduce((cals, currentCal) => cals + currentCal, 0);
+
+  const calorieDom = document.createElement("h4");
+  calorieDom.textContent = `Calories: ${totalCalories}`;
+  dishContainer.appendChild(calorieDom);
   
   // Add price
   const dishPriceDom = document.createElement('p');
