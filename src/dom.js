@@ -78,4 +78,24 @@ function addDish(container, dishName, dishMacros, dishPrice) {
   container.appendChild(dishContainer);
 }
 
-export { addText, addImage, addReview, addList , addDish};
+function objectToList(contentContainer, obj) {
+  const objList = document.createElement("ul");
+
+  // Get keys and vals of macros and put in arr
+  const objKeys = Object.keys(obj);
+
+  const objVals = Object.values(obj);
+  
+  // Add macros in dish
+  for (let i = 0; i < objKeys.length; i++) {
+    let contactInfos = "";
+    contactInfos = `${objKeys[i]}: ${objVals[i]}`;
+    const contactDom = document.createElement("li");
+    contactDom.textContent = contactInfos;
+    objList.appendChild(contactDom);
+  }
+
+  contentContainer.appendChild(objList);
+}
+
+export { addText, addImage, addReview, addList , addDish, objectToList};
