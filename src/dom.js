@@ -1,7 +1,8 @@
-function addText(container, element, message, fontSize) {
+function addText(container, element, message, fontSize, className) {
   const text = document.createElement(element);
   text.textContent = message;
   text.style.fontSize = fontSize;
+  text.classList.add(className);
   container.appendChild(text);
 }
 
@@ -9,15 +10,17 @@ function addImage(container, image) {
   container.appendChild(image);
 }
 
-function addReview(container, sectionElement, sectionTextElement, sectionMessage, sectionMessageFS, customer) {
+function addReview(container, sectionElement, sectionTextElement, sectionMessage, sectionMessageFS, customer, className) {
   const section = document.createElement(sectionElement); 
   addText(section, sectionTextElement, sectionMessage, sectionMessageFS);
   addText(section, sectionTextElement, customer, sectionMessageFS)
+  section.classList.add(className);
   container.appendChild(section);
 }
 
-function addList(container,listType, listContent) {
+function addList(container,listType, listContent, className) {
   const newList = document.createElement(listType);
+  newList.classList.add(className);
 
   listContent.map(content => {
     const listContentDom = document.createElement("li");
@@ -34,6 +37,7 @@ function macroToNum(str) {
 
 function addDish(container, dishName, dishMacros, dishPrice) {
   const dishContainer = document.createElement("div");
+  dishContainer.classList.add("dish");
   dishContainer.style.border = "1px solid black";
 
   addText(dishContainer, "h3", dishName, "1rem");
@@ -78,7 +82,7 @@ function addDish(container, dishName, dishMacros, dishPrice) {
   container.appendChild(dishContainer);
 }
 
-function objectToList(contentContainer, obj) {
+function objectToList(contentContainer, obj, className) {
   const objList = document.createElement("ul");
 
   // Get keys and vals of macros and put in arr
